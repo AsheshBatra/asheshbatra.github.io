@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="company-name">
+                <h1>Art Gallery</h1>
+            </div>
+            <button class="menu-toggle">&#9776;</button>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="form-section">
+            <h2>About Us</h2>          
+            <p id="sec">"Welcome to our online gallery of art where creativity is limitless." You will discover fascinating works of talented artists from all over the world,curated to inspire and enrich your life. With every visit, you'll be immersed in a world of beauty, expression, and imagination."</p> 
+
+            <h2>Get In Touch With Us</h2>
+
+            <form id="myForm">
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="number">Contact Number:</label>
+                    <input type="number" id="number" name="number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="purchased">Have you ever purchased Art from us?</label><br>
+                    <input type="radio" id="yes1" name="purchased" value="yes" onclick="showPurchasedFields()"> Yes
+                    <input type="radio" id="no1" name="purchased" value="no" onclick="showInterestedFields()"> No
+                </div>
+
+                <div id="purchasedFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="artName">Art Name:</label>
+                        <input type="text" id="artName" name="artName">
+                    </div>
+                    <div class="form-group">
+                        <label for="artistName">Artist Name:</label>
+                        <input type="text" id="artistName" name="artistName">
+                    </div>
+                    <div class="form-group">
+                        <label for="satisfied">Are you satisfied with our service?</label><br>
+                        <input type="radio" id="yes3" name="satisfied" value="yes"> Yes
+                        <input type="radio" id="no3" name="satisfied" value="no"> No
+                    </div>
+                </div>
+
+                <div id="interestedFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="interested">Are you interested in our art?</label><br>
+                        <input type="radio" id="yes2" name="interested" value="yes"> Yes
+                        <input type="radio" id="no2" name="interested" value="no"> No
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Message:</label><br>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit" onclick="saveFormData()">
+                </div>
+            </form>
+        </section>
+    </div>
+              
+    <script src="script.js"></script>
+</body>
+</html>
